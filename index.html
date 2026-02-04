@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Ria M Portfolio</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<link rel="stylesheet" href="CSS/style.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+<div class="hero">
+    <img src="pollution ivan bandura.jpg">
+    <div class="hero-text">
+        <h1>Kansas Toxic Chemicals Exposure Disparity</h1>
+        <h2> A statewide analysis of disparities in exposure to toxic chemicals from reported industrial facilities.</h2>
+    </div>
+</div>
+
+</head>
+
+<script>
+document.querySelectorAll('.zoom-img').forEach(img => {
+    img.addEventListener('click', () => {
+        img.classList.toggle('zoomed');
+    });
+});
+</script>
+
+<body>
+
+<div class="content">
+
+<p>Toxic chemicals released from industries infiltrate our ecosystems, atmosphere, food, and ultimately our bodies. Communities living closest to these industries carry the greatest burden of exposure. Across the U.S., and here in Kansas, industries have often been placed away from affluent, predominantly White neighborhoods, while lower-income and more diverse communities face a disproportionate share of the risks. This StoryMap examines how these disparities unfold across Kansas, highlighting the communities most significantly impacted.</p>
+
+<p>The Environmental Protection Agency (EPA) releases the Toxic Release Inventory (TRI), which tracks the disposal of chemical waste by industries based on mandatory reporting from industrial facilities. The industries report 799 chemicals across 39 chemical categories that are known to cause cancer or other health concerns, adverse acute health effects, or adverse environmental impacts. </p>
+
+<p> The Environmental Protection Agency (EPA) releases the Toxic Release Inventory (TRI), which tracks the disposal of chemical waste by industries based on mandatory reporting from industrial facilities. The industries report 799 chemicals across 39 chemical categories that are known to cause cancer or other health concerns, adverse acute health effects, or adverse environmental impacts. 
+The released data includes on-site and off-site disposal from air emissions, water discharges, landfill disposals, and underground injection wells. On-site disposals refer to the disposal of chemical waste within the facility's vicinity, whereas off-site disposals involve the transfer of chemical waste from the facility to a location outside the industrial facility. </p>
+
+<img src="Chemical release medium by industry for 2023.png" alt="Chemical release medium by industry for 2023" class="zoom-img">
+
+<p>The chart above shows the amount of waste disposed of through various media grouped by industry sector. Stack air emissions, which refer to emissions through confined air streams, were the primary source of on-site waste disposal in most industries. Fugitive air disposal includes all air emissions not through confined air streams, occurring due to leaks, surface impoundments or spills, or releases from building ventilation systems. Waste discharged into water was highest within the food industry.</p>
+
+<p>The location of these facilities is often farther away from affluent neighborhoods-- historically occupied by the white population. Therefore, the exposure risk is higher for communities and neighborhoods living near industrial facilities that are often located in racial minority and lower-income neighborhoods. 
+For this project, data were obtained for all facilities registered for TRI chemical waste reporting in the state of Kansas. The downloaded 2023 dataset included facility names, the type of industry the facility falls under, and the amount of waste disposed of through various media in pounds. This data was supplemented by census tract-level demographic characteristics data provided by the American Community Survey (ACS). Specifically, poverty and race variables were selected to visualize the disparities within economic and racial communities.</p>
+
+
+<p>Kansas City and Wichita are among the most populous and diverse regions within Kansas. The toxic burden map on the right indicates a greater risk of exposure among the Black population in these cities relative to the overall population. For instance, in Kansas City, census tracts with higher Black populations are situated near waste-releasing industries, and Black residents in these areas face nearly 13 times the risk of exposure compared to the average population. </p>
+
+</div>
+<div id="map"></div>
+<script src="Toxic_Burden.js" type="text/javascript"></script>
+
+<script src="JS/map.js"> </script> 
+
+
+</body>
+
+</html>
